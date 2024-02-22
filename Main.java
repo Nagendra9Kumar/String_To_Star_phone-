@@ -490,9 +490,11 @@ class ArrangeAlpha {
 public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
+        System.out.println();
         // Taking input
         System.out.print("  Enter Your Name: ");
         String name = sc.nextLine();
+        System.out.println();
         // Converting name to uppercase
         String str = name.toUpperCase();
         // storing single letter of name into letter array
@@ -620,6 +622,7 @@ public class Main {
         }
 
         print.print(finallString);
+        System.out.println();
         sc.close();
     }
 }

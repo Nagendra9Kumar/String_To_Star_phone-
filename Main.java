@@ -453,6 +453,18 @@ class StarZ {
     }
 }
 
+class StarSpace {
+    String space[][] = new String[6][2];
+
+    StarSpace() {
+        for (int i = 0; i <= 5; i++) {
+            for (int j = 0; j <= 1; j++) {
+                space[i][j] = "  ";
+            }
+        }
+    }
+}
+
 class Print {
     public void print(String[][] arr) {
         for (int i = 1; i <= 5; i++) {
@@ -532,6 +544,7 @@ public class Main {
         StarX x = new StarX();
         StarY y = new StarY();
         StarZ z = new StarZ();
+        StarSpace space = new StarSpace();
         String finallString[][] = new String[6][0];
         ArrangeAlpha arng = new ArrangeAlpha();
         int count = 0;
@@ -614,6 +627,9 @@ public class Main {
                 count++;
             } else if (letter[count] == 'Z') {
                 finallString = arng.arrange(finallString, z.z);
+                count++;
+            } else if (letter[count] == ' ') {
+                finallString = arng.arrange(finallString, space.space);
                 count++;
             } else {
                 System.out.println("You Are Dumb Enter Charecter In B/W A-Z.");
